@@ -1,0 +1,66 @@
+[
+    {
+        "Name": "db-net",
+        "Id": "32bd860885e21e7dea063dae2eebabccea6ecc14eaec4672c6d7702d869e21b3",
+        "Created": "2025-09-09T14:46:01.176973503Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "12418eae3c34949a4ac61f7c9ae483df60c53df36122b9d1ec9cb0457625158b": {
+                "Name": "server",
+                "EndpointID": "1ab8e069d4e8f3a354f53c55ac3896194c01533a99d6e0ccf9765ad00877c33f",
+                "MacAddress": "02:42:ac:12:00:06",
+                "IPv4Address": "172.18.0.6/16",
+                "IPv6Address": ""
+            },
+            "24a93bc90caa6d164f0447a42d4158743d1d6d8938f53f6b0dd7379a3303571c": {
+                "Name": "borrow_service",
+                "EndpointID": "c3e25a4d620f7851afa16f609b6ffe91be06a01fed6b49e7fcd2681023bc4c1c",
+                "MacAddress": "02:42:ac:12:00:05",
+                "IPv4Address": "172.18.0.5/16",
+                "IPv6Address": ""
+            },
+            "3853b2af9d2242af28baa5c51afe4c65a5eaa974cb7e4fb70c14524c68d8728b": {
+                "Name": "auth_service",
+                "EndpointID": "0248291c2531653e93f2d597f57c6010ccbe88e083901866def901bb890bb5f3",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "6eda28ba6742e0ea333d0ffef0d0eb06e3a4858cd5a1df584f9ad7f81819c3f8": {
+                "Name": "book_service",
+                "EndpointID": "3dc19a100e9b76e31157c3788428071faf278489f19f0b48216ea19e9f47dc37",
+                "MacAddress": "02:42:ac:12:00:04",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            },
+            "aa4844682c181f75732aa106033b35e0467f6d08e2416e2299d8a78726870541": {
+                "Name": "db",
+                "EndpointID": "ce45d112ce501dee29f10e9e263d911b1bc7e7078049b319948fd8f232387de1",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
