@@ -1,0 +1,42 @@
+---
+services:
+  db:
+    image: mrmeaningless/library:dbimage
+    ports:
+      - "3306:3306"
+    deploy:
+      replicas: 1
+  auth_service:
+    image: mrmeaningless/library:authimage
+    ports:
+      - "5001:5001"
+    deploy:
+      replicas: 1
+    depends_on:
+      - db
+  book_service:
+    image: mrmeaningless/library:bookimage
+    ports:
+      - "5002:5002"
+    deploy:
+      replicas: 1
+    depends_on:
+      - db
+  borrow_service:
+    image: mrmeaningless/library:borrowimage
+    ports:
+      - "5003:5003"
+    deploy:
+      replicas: 1
+    depends_on:
+      - db
+  app_service:
+    image: mrmeaningless/library:appimage
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 1
+    depends_on:
+      - auth_service
+      - book_service
+      - borrow_service
