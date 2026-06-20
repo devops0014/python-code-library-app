@@ -9,7 +9,7 @@ services:
     networks:
       - mynetwork
 
-  auth:
+  auth_service:
     image: shaikmustafa/pyapp:auth_image
     deploy:
       replicas: 1
@@ -21,7 +21,7 @@ services:
       - db
     
 
-  book:
+  book_service:
     image: shaikmustafa/pyapp:book_image
     deploy:
       replicas: 1
@@ -31,7 +31,7 @@ services:
       - mynetwork
     depends_on:
       - db
-  borrow:
+  borrow_service:
     image: shaikmustafa/pyapp:borrow_image
     deploy:
       replicas: 1
